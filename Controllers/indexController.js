@@ -1,15 +1,24 @@
 const { catchAsyncErrors } = require("../middlewares/catchAsyncErrors");
 const Student=require("../models/studentModel");
 const ErrorHandler = require("../utils/ErrorHandler");
+const { sendtoken } = require("../utils/SendToken");
+
 
 // /homepage
 exports.homepage= catchAsyncErrors(async(req,res,next)=>{
-    res.json({message:"homepage"});
+    res.json({message:"Secured homepage"});
+});
+
+// /student
+exports.currentUser= catchAsyncErrors(async(req,res,next)=>{
+    const student= await Student.findById(req.id).exec();
+    res.json({student});
 });
 
 // /student/signup
 exports.studentSignUp= catchAsyncErrors(async(req,res,next)=>{
     const student= await new Student(req.body).save();
+    sendtoken(student,201,res);
     res.status(201).json(student);
 });
 
@@ -25,11 +34,14 @@ exports.studentLogin= catchAsyncErrors(async(req,res,next)=>{
     const isMatch = student.comparepassword(req.body.password);
     if(!isMatch) return next(new ErrorHandler("Wrong Creds",500));
 
+    sendtoken(student,201,res)
+
     res.json(student);
 
 });
 
 // /student/logout
 exports.studentLogout= catchAsyncErrors(async(req,res,next)=>{
-    
+    res.clearCookie("token");
+    res.json({message:"Logout Successful"});
 });

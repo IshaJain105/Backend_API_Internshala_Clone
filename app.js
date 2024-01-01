@@ -15,6 +15,18 @@ app.use(logger("tiny"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
+//session and cookies
+const session= require("express-session");
+const cookieparser= require("cookie-parser");
+//activate session
+app.use(session({
+    resave: true,
+    saveUninitialized:true,
+    secret:process.env.EXPRESS_SESSION_SECRET
+}))
+//create cookie
+app.use(cookieparser());
+
 //routes
 app.use("/",require("./routes/indexRoutes"));
 
