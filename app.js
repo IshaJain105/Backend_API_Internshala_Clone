@@ -27,6 +27,9 @@ app.use(session({
 //create cookie
 app.use(cookieparser());
 
+//express-fileupload
+const fileupload=require("express-fileupload");
+app.use(fileupload());
 //routes
 app.use("/",require("./routes/indexRoutes"));
 

@@ -45,7 +45,14 @@ const studentModel=new mongoose.Schema({
         type:String,
         default: "0"
     },
-    avatar: String,
+    avatar: {
+        type: Object,
+        default:{
+            fileId: "",
+            //dummy image
+            url: "https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_400,h_400/https://useqwitter.com/wp-content/uploads/2022/08/blank-twitter-icon.jpg"
+        }
+    },
 
 },{timestamps: true});
 
