@@ -3,10 +3,35 @@ const mongoose=require("mongoose");
 const jwt=require("jsonwebtoken");
 
 const studentModel=new mongoose.Schema({
+    firstname:{
+        type: String,
+        required:[true,"Firstname is required"],
+        minLength: [3,"first name should have atleast 3 characters"],
+    },
+    lastname:{
+        type: String,
+        required:[true,"Last name is required"],
+        minLength: [3,"Last name should have atleast 3 characters"],
+    },
+    gender:{
+        type: String,
+        enum: ["Male","Female","Others"]
+    },
+    city:{
+        type: String,
+        required:[true,"City is required"],
+        minLength: [3,"City should have atleast 3 characters"],
+    },
+    contact:{
+        type: String,
+        required:[true,"Last name is required"],
+        maxLength: [10,"Contact number should not exceed more then 10 characters"],
+        minLength: [10,"Contact number should have atleast 10 characters"],
+    },
     email:{
         type: String,
         unique:true,
-        require:[true,"Emial is required"],
+        required:[true,"Email is required"],
         match:[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,"Email address is invalid"]
     },
     password: {
@@ -15,12 +40,12 @@ const studentModel=new mongoose.Schema({
         maxLength: [15,"Password should not exceed more then 15 characters"],
         minLength: [6,"Password should have atleast 6 characters"],
         // match:[],
-
     },
     resetPasswordLink:{
         type:String,
         default: "0"
-    }
+    },
+    avatar: String,
 
 },{timestamps: true});
 

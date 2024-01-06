@@ -23,7 +23,6 @@ exports.studentSignUp= catchAsyncErrors(async(req,res,next)=>{
     res.status(201).json(student);
 });
 
-
 // /student/login
 exports.studentLogin= catchAsyncErrors(async(req,res,next)=>{
     const student = await Student.findOne({email: req.body.email}).select("+password").exec();
@@ -91,5 +90,13 @@ exports.studentresetpassword=catchAsyncErrors(async(req,res,next)=>{
     await student.save();
     sendtoken(student,201,res);
 
+});
+
+exports.studentupdate= catchAsyncErrors(async(req,res,next)=>{
+    await Student.findByIdAndUpdate(req.id,req.body).exec();
+    res.status(201).json({
+        success: true,
+        message:"Successfully Updated",
+    });
 });
 
