@@ -17,6 +17,10 @@ const studentModel=new mongoose.Schema({
         // match:[],
 
     },
+    resetPasswordLink:{
+        type:String,
+        default: "0"
+    }
 
 },{timestamps: true});
 
