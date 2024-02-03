@@ -28,7 +28,7 @@ router.get("/student/forget-link/:id",studentforgetlink);
 router.post("/student/reset-password",isAuthenticated,studentresetpassword);
 
 //POST /student/update
-router.post("/student/update",isAuthenticated,studentupdate);
+router.post("/student/update/:id",isAuthenticated,studentupdate);
 
 //POST /student/avatar
 router.post("/student/avatar",isAuthenticated,studentavatar);
