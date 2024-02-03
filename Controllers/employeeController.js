@@ -5,6 +5,7 @@ const { sendmail } = require("../utils/nodemailer");
 const { sendtoken } = require("../utils/SendToken");
 const imagekit=require("../utils/imagekit").initImagekit();
 const path=require("path");
+const Internship = require("../models/internshipModel");
 
 // /homepage
 exports.homepage= catchAsyncErrors(async(req,res,next)=>{
@@ -126,4 +127,8 @@ exports.employeeavatar= catchAsyncErrors(async(req,res,next)=>{
     });
 });
 
-
+// /employee/internship/create
+exports.createinternship= catchAsyncErrors(async(req,res,next)=>{
+    const internship= await new Internship(req.body).save();
+    res.status(201).json({success : true, internship});
+});

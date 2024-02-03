@@ -1,5 +1,5 @@
 const express= require("express");
-const { homepage ,currentEmployee, employeeSignUp,employeeLogin,employeesendmail,employeeLogout,employeeforgetlink,employeeresetpassword,employeeupdate,employeeavatar } = require("../Controllers/employeeController");
+const { homepage ,currentEmployee, employeeSignUp,employeeLogin,employeesendmail,employeeLogout,employeeforgetlink,employeeresetpassword,employeeupdate,employeeavatar,createinternship } = require("../Controllers/employeeController");
 const { isAuthenticated } = require("../middlewares/auth");
 const router=express.Router();
 
@@ -32,5 +32,12 @@ router.post("/update/:id",isAuthenticated,employeeupdate);
 
 //POST /employee/avatar/id
 router.post("/employeeavatar/:id",isAuthenticated,employeeavatar);
+
+
+// -------------------Internship--------------------
+
+//POST /employee/internship/create
+router.post("/internship/create",isAuthenticated,createinternship);
+
 
 module.exports=router
