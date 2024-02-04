@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 
 const jobModel=new mongoose.Schema({
     employee:{type: mongoose.Schema.Types.ObjectId, ref:"Employee"},
-    student:[{type: mongoose.Schema.Types.ObjectId, ref:"student"}],
+    students:[{type: mongoose.Schema.Types.ObjectId, ref:"Student"}],
     title:String,
     skills: String,
     jobtype: {type: String, enum:["In office","Remote"]},

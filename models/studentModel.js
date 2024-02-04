@@ -93,7 +93,7 @@ studentModel.methods.getjwtToken=function(){
     )
 }
 
-const Student = mongoose.model("student",studentModel);
+const Student = mongoose.model("Student",studentModel);
 module.exports=Student;
 
 

@@ -5,6 +5,9 @@ const { sendmail } = require("../utils/nodemailer");
 const { sendtoken } = require("../utils/SendToken");
 const imagekit=require("../utils/imagekit").initImagekit();
 const path=require("path");
+const Internship = require("../models/internshipModel");
+const Job = require("../models/jobModel");
+
 
 // /homepage
 exports.homepage= catchAsyncErrors(async(req,res,next)=>{
@@ -124,6 +127,30 @@ exports.studentavatar= catchAsyncErrors(async(req,res,next)=>{
         success:true,
         message: "Pic uploaded successfully!"
     });
+});
+
+//---------------------apply internship--------------
+// /studentapply/internship/:internshipid
+exports.applyinternship= catchAsyncErrors(async(req,res,next)=>{
+    const student= await Student.findById(req.id).exec();
+    const internship= await Internship.findById(req.params.internshipid).exec();
+    student.internships.push(internship._id);
+    internship.students.push(student._id);
+    await student.save();
+    await internship.save();
+    res.json({student});
+});
+
+//---------------------apply job--------------
+// /student/apply/job/:jobid
+exports.applyjob= catchAsyncErrors(async(req,res,next)=>{
+    const student= await Student.findById(req.id).exec();
+    const job= await Job.findById(req.params.jobid).exec();
+    student.jobs.push(job._id);
+    job.students.push(student._id);
+    await student.save();
+    await job.save();
+    res.json({student});
 });
 
 

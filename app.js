@@ -36,8 +36,6 @@ app.use("/user",require("./routes/indexRoutes"));
 app.use("/resume",require("./routes/resumeRoutes"));
 app.use("/employee",require("./routes/employeeRoutes"));
 
-
-
 //errors
 app.all("*",(req,res,next)=>{
     next(new ErrorHandler(`requested URL not found ${req.url}`,404));
