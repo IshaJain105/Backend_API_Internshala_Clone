@@ -1,0 +1,1017 @@
+{
+	"info": {
+		"_postman_id": "d1f1f903-ca23-4cdf-beea-71c9f757b078",
+		"name": "InternshalaCloneAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21383106"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ishajain105k@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/user/student/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apply internship",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ishajain105k@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/user/student/apply/internship/65beab0d7937631b31b4c385",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"student",
+								"apply",
+								"internship",
+								"65beab0d7937631b31b4c385"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apply job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ishajain105k@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/user/student/apply/internship/65beab0d7937631b31b4c385",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"student",
+								"apply",
+								"internship",
+								"65beab0d7937631b31b4c385"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "isha@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "homepage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-mail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/student/send-mail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"send-mail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-link",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "1234563",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/forget-link/65994244f68877ccbbce327d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"forget-link",
+								"65994244f68877ccbbce327d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avatar upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avartar",
+									"type": "file",
+									"src": "/G:/faltu/warren-VVEwJJRRHgk-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/avatar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "isha@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "internship",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"profile\":\"Frontend dev\",\r\n    \"skills\": \"MERN\",\r\n    \"internshiptype\": \"In office\",\r\n    \"openings\": 5,\r\n    \"from\": \"10-02-2024\",\r\n    \"to\": \"10-03-2024\",\r\n    \"duration\": \"6 months\",\r\n    \"responsibilities\": \"Able to support frontend and backend.\",\r\n    \"stipend\": {\r\n        \"status\": \"Fixed\",\r\n        \"amount\":10000\r\n    },\r\n    \"perks\": \"XYZ\",\r\n    \"assesmnts\": \"Why should we hire you?\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/employee/internship/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"internship",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "readsingle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/employee/internship/readsingle/65bea74283bf96d5d8fea7b3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"internship",
+										"readsingle",
+										"65bea74283bf96d5d8fea7b3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "read",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/employee/internship/read",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"internship",
+										"read"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "job",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"profile\":\"Frontend dev\",\r\n    \"skills\": \"MERN\",\r\n    \"internshiptype\": \"In office\",\r\n    \"openings\": 5,\r\n    \"from\": \"10-02-2024\",\r\n    \"to\": \"10-03-2024\",\r\n    \"duration\": \"6 months\",\r\n    \"responsibilities\": \"Able to support frontend and backend.\",\r\n    \"stipend\": {\r\n        \"status\": \"Fixed\",\r\n        \"amount\":10000\r\n    },\r\n    \"perks\": \"XYZ\",\r\n    \"assesmnts\": \"Why should we hire you?\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/employee/internship/create",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"internship",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "readsingle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/employee/internship/readsingle/65bea74283bf96d5d8fea7b3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"internship",
+										"readsingle",
+										"65bea74283bf96d5d8fea7b3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "read",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/employee/job/read",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"job",
+										"read"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "homepage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "isha@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "isha@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-mail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/student/send-mail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"send-mail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-link",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "1234563",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/forget-link/65994244f68877ccbbce327d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"forget-link",
+								"65994244f68877ccbbce327d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/reset-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avatar upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avartar",
+									"type": "file",
+									"src": "/G:/faltu/warren-VVEwJJRRHgk-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/avatar/65bd386f2f1abbcdf39b1784",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"avatar",
+								"65bd386f2f1abbcdf39b1784"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "isha@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/student/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resume",
+			"item": [
+				{
+					"name": "resume",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/resume/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"resume",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adding education",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "Completed",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2018",
+									"type": "text"
+								},
+								{
+									"key": "board",
+									"value": "CBSE",
+									"type": "text"
+								},
+								{
+									"key": "performance",
+									"value": "8.4",
+									"type": "text"
+								},
+								{
+									"key": "School",
+									"value": "DPS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/resume/add-edu",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"resume",
+								"add-edu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit education",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "Completed",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "board",
+									"value": "CBSE",
+									"type": "text"
+								},
+								{
+									"key": "performance",
+									"value": "8.4",
+									"type": "text"
+								},
+								{
+									"key": "School",
+									"value": "SJC",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/resume/edit-edu/abed8d1f-7997-409a-a3a9-ab2829b0493d",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"resume",
+								"edit-edu",
+								"abed8d1f-7997-409a-a3a9-ab2829b0493d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete education",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "Completed",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2018",
+									"type": "text"
+								},
+								{
+									"key": "board",
+									"value": "CBSE",
+									"type": "text"
+								},
+								{
+									"key": "performance",
+									"value": "8.4",
+									"type": "text"
+								},
+								{
+									"key": "School",
+									"value": "DPS",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/resume/add-edu",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"resume",
+								"add-edu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
