@@ -1,6 +1,8 @@
 const mongoose=require("mongoose");
 
 const internshipModel=new mongoose.Schema({
+    employee:{type: mongoose.Schema.Types.ObjectId, ref:"Employee"},
+    student:[{type: mongoose.Schema.Types.ObjectId, ref:"student"}],
     profile:String,
     skills: String,
     internshiptype: {type: String, enum:["In office","Remote"]},
